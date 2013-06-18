@@ -1,2 +1,36 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+.curriculum-vitae {  
+
+  .name  {
+
+    font-size: 60px;
+    
+    .first {
+      font-weight: normal;
+    }
+
+    .last {
+      font-weight: bold;
+    }
+
+  }
+
+  .subtitle {
+
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 23px;
+    color: #585C60;
+    -webkit-font-smoothing: antialiased;
+
+  }
+
+  #contact .row-fluid {
+    line-height: 10px;
+    margin-bottom: 4px;
+
+    .info {
+      margin-top: 8px;
+    }
+  }
+
+}
