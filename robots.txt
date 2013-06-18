@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://edwardtaylor.github.io/sitemap.xml 
