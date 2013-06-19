@@ -17,19 +17,75 @@
   .subtitle {
 
     font-weight: 300;
-    font-size: 26px;
+    font-size: 40px;
     line-height: 23px;
     color: #585C60;
     -webkit-font-smoothing: antialiased;
 
   }
 
-  #contact .row-fluid {
-    line-height: 10px;
-    margin-bottom: 4px;
 
-    .info {
-      margin-top: 8px;
+  h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 4px solid #7fc3ff;    
+  }
+
+  #contact {
+
+    address {
+      margin-bottom: 4px;
+    }
+
+    .row-fluid {
+      line-height: 10px;
+      margin-bottom: 4px;
+
+      .info {
+        margin-top: 8px;
+      }
+    }
+
+  }
+
+  #experience {    
+    h4 {
+      font-size: 16px;
+      margin: 2px;
+    }
+
+    .divider {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 1px;
+      border-bottom: 1px solid #7fc3ff;
+    }
+
+    .job-title {
+      line-height: 23px;
+      font-weight: bold;
+      color: #585C60;
+    }
+
+    dl {
+      margin-top: 20px;
+    }
+
+    dt {
+       text-align: left;       
+    }
+
+    dd {
+      margin-left: 25px;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+    
+    li {
+      margin-bottom: 4px;
     }
   }
 
