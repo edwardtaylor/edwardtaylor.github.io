@@ -1,3 +1,13 @@
+#gear_logo {
+  font-size: 125px;
+  margin-top: 10px;
+  margin-left: 30px;
+  .icon-cogs {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
 .meter-10 {
   background: url(/images/sprite.png) no-repeat;
   background-size: 230px 130px;
@@ -153,8 +163,12 @@
       margin-top: 20px;
     }
 
+    .dl-horizontal dt {
+      width: 150px;
+    }
+
     dt {
-       text-align: left;       
+      text-align: left;       
     }
 
     dd {
