@@ -67,3 +67,9 @@ The greatest impact I've experienced by practicing BDD & TDD comes not from exec
 I'll wrap up this post by showcasing this snazzy [workflow](http://www.planetgeek.ch/2013/06/05/clean-code-cheat-sheet) that describes how acceptance tests integrate with my current development cycle. Take note of where the process starts and where the first line of code is actually written.
 
 [![ATDD TDD Workflow](/images/atdd_tdd_lifecycle.png)](/images/atdd_tdd_lifecycle.png)
+
+### Additional Reading
+
+* [ATDD by Example: A Practical Guide to Acceptance Test-Driven Development](http://www.amazon.com/ATDD-Example-Test-Driven-Development-Addison-Wesley/dp/0321784154) Markus Gärtner 
+* [Test Driven: TDD and Acceptance TDD for Java Developers](http://www.amazon.com/Test-Driven-Acceptance-Java-Developers/dp/1932394850) Lasse Koskela 
+* [The RSpec Book: Behaviour Driven Development with Rspec, Cucumber, and Friends](http://www.amazon.com/RSpec-Book-Behaviour-Development-Cucumber/dp/1934356379/) David Chelimsky, Dave Astels, Bryan Helmkamp, Dan North, Zach Dennis, Aslak Hellesoy
