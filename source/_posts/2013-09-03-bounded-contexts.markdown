@@ -16,7 +16,7 @@ By defining our bounded contexts, we explicitly state the responsibilities and e
 
 > "Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius -- and a lot of courage -- to move in the opposite direction." - Albert Einstein
 
-Complexity is the true archnemesis of software development and Bounded Contexts are another weapon we can use to keep our applications simple and maintainable. Drawing these clear boundaries allows us to deploy/scale to the specific needs of each domain. Each Bounded Context can pick the technologies and architecture best suited for their domain. There are several BCs where a simple CRUD application will suffice while others may require different approaches. In the end, the constaints imposed by Bounded Context add incrediable amounts of flexability and freedom to choose the best solution for a given domain.
+Complexity is the true arch-nemesis of software development and Bounded Contexts are another weapon we can use to keep our applications simple and maintainable. Drawing these clear boundaries allows us to deploy/scale to the specific needs of each domain. Each Bounded Context can pick the technologies and architecture best suited for their domain. There are several BCs where a simple CRUD application will suffice while others may require different approaches. In the end, the constraints imposed by Bounded Context add incredible amounts of flexibility and freedom to choose the best solution for a given domain.
 
 Resources:
 
