@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: BDD | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/bdd/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Embracing BDD]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd/"/>
+    <updated>2013-08-05T23:30:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd</id>
+    <content type="html"><![CDATA[<h3>Wikipedia Definition</h3>
+
+<blockquote><p>Behavior-driven development combines the general techniques and principles of <a href="http://en.wikipedia.org/wiki/Test-driven_development">test-driven-development</a> with ideas from <a href="http://en.wikipedia.org/wiki/Domain-driven_design">domain-driven design</a> and <a href="http://en.wikipedia.org/wiki/Object-oriented_analysis_and_design">object-oriented analysis and design</a> to provide software developers and business analysts with shared tools and a shared process to collaborate on software development, with the aim of delivering software that matters (as opposed to software that doesn&rsquo;t matter).</p></blockquote>
+
+<h3>Not about the tests</h3>
+
+<p>Most people&rsquo;s first reaction when being introduced to TDD and BDD is thinking these methodologies are all about writing tests. The value realized by writing tests lies not with the instant gratification of seeing a green check after writing code, but the thought process and team collaboration that occurs prior to coding. The principles of BDD bring the team together to share a common understanding of the functionality a feature will provide after its implementation. As an added bonus, automated testing builds the support system required to allow the team to refactor and embrace change within the application.</p>
+
+<p>Veterans of TDD understand and appreciate the work-flow TDD provides to add structure to development process. TDD breaks down the implementation process into small incremental pieces and creates of work-flow where the developer is constantly asserting the expected behavior of the code written. BDD strives to bring these same benefits to the entire team and external customers by providing a framework which focuses on functionality delivered and not the implementation details.</p>
+
+<h3>Ubiquitous Language</h3>
+
+<p>BDD complements the practice of Domain-Driven-Design and shares the concept of a <a href="http://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>. While also being a $5 dollar term, the ubiquitous language is defined by Eric Evans in his book, <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain Driven Design</a> (the blue book), as a &ldquo;language structured around the domain model and used by all team members to connect all the activities of the team with the software.&rdquo;</p>
+
+<p>This common language is used by the Customer, Product Owner, Developer, QA, and all members of the team. Instead of communicating in technical terms, everyone on the team communicates using the evolving language. This domain vernacular stretches deep into the implementation details as the code itself represents the shared model the team uses to communicate. Developers will frequently rename methods or classes in response to changes in terminology used by the Customer and Product Owner. Approaching software development practicing DDD allows us to remove unnecessary translation from the non-technical to the technical persons as both parties speak in the same terms. Due note that not all code found within an application will match the domain&rsquo;s language, but we want to strive to have our business model map directly to the mental model shared by the team.</p>
+
+<h3>Specifications</h3>
+
+<p>In the realm of BDD, specifications are written using the ubiquitous language and are the medium used to communicate functionality to all team members. By embracing and defining the domain language, we enable everyone the ability to design, write, and review the constraints and expectations of a feature. What exactly makes up a specification?</p>
+
+<p>Specifications consist of the following:</p>
+
+<ul>
+<li>Title &ndash; One line description</li>
+<li>Narrative &ndash; Explains the business value of the feature</li>
+<li>Acceptance Criteria &ndash; Describes the features functionality by asserting expectations</li>
+</ul>
+
+
+<p>Example:</p>
+
+<pre><code>Title:  Add product to cart
+
+Narrative:  As a customer
+            I want to add products to a cart
+            So that I can view my current total
+
+Acceptance Criteria:
+
+  Scenario 1: Add Product to Cart
+              Given a user viewing the product catalog
+              When the user adds a product to the cart
+              Then the product is listed in the Cart 
+                And the cart total is increased
+</code></pre>
+
+<h3>Acceptance Criteria</h3>
+
+<p>We continue to define Acceptance Criteria until there is no more ambiguity surrounding the user story. Once we&rsquo;ve exhausted all the acceptance criteria, the team can properly size and estimate the amount of effort required to complete the feature. This implies all acceptance tests need to be written prior to beginning a sprint or as part of the planning session. Ideally defining the acceptance criteria will take place as part of regular scheduled grooming meetings where the Product Owner can address the entire team about an upcoming features and priority.</p>
+
+<p>What makes an acceptance test?</p>
+
+<ul>
+<li>Owned by the customer or Product Owner</li>
+<li>Written by the team (Product Owner, Developer, QA)</li>
+<li>Focuses on <em>what</em> not <em>how</em></li>
+<li>Expressed using the ubiquitous language</li>
+<li>Concise, Precise, and unambiguous</li>
+</ul>
+
+
+<h3>Remove ambiguity</h3>
+
+<p>Much like a plumber passes water through a pipe to check the handy work of a patch job, passing data through our tests allows us to see scenarios we missed and removes ambiguity. How are we handling rounding? Are we using Banker&rsquo;s rounding? How do I distribute $1.00 across 12 months? Data helps tell the story and provides concrete examples of the expectations of the feature from all the stakeholders. Part of wrestling complexity in software is removing ambiguity. Following the principles of <em>specifications by example</em>, we learn more about a feature by analyzing the desired outcomes.</p>
+
+<h3>Knowing the answer</h3>
+
+<p>The greatest impact I&rsquo;ve experienced by practicing BDD &amp; TDD comes not from executing the test cases but the process involved in authoring the tests. By thinking about each scenario and the acceptance criteria, I have a more thorough understanding of what I need to accomplish before writing a single line of code. It&rsquo;s truly remarkable how easily the implementation details can be discovered when you know the end result. Have you ever been required to show your work for a calculus problem? How much easier was the problem to solve by knowing the question and the answer. In the event you miscalculated, you quickly notice the error (most of the time prior to completion), and can backtrack to the point your solution deviated. This type of immediate feedback is at the core of driving our implementation details by external specifications.</p>
+
+<h3>Development cycle</h3>
+
+<p>I&rsquo;ll wrap up this post by showcasing this snazzy <a href="http://www.planetgeek.ch/2013/06/05/clean-code-cheat-sheet">workflow</a> that describes how acceptance tests integrate with my current development cycle. Take note of where the process starts and where the first line of code is actually written.</p>
+
+<p><a href="/images/atdd_tdd_lifecycle.png"><img src="/images/atdd_tdd_lifecycle.png" alt="ATDD TDD Workflow" /></a></p>
+
+<h3>Additional Reading</h3>
+
+<ul>
+<li><a href="http://www.amazon.com/ATDD-Example-Test-Driven-Development-Addison-Wesley/dp/0321784154">ATDD by Example: A Practical Guide to Acceptance Test-Driven Development</a> Markus Gärtner</li>
+<li><a href="http://www.amazon.com/Test-Driven-Acceptance-Java-Developers/dp/1932394850">Test Driven: TDD and Acceptance TDD for Java Developers</a> Lasse Koskela</li>
+<li><a href="http://www.amazon.com/RSpec-Book-Behaviour-Development-Cucumber/dp/1934356379/">The RSpec Book: Behaviour Driven Development with Rspec, Cucumber, and Friends</a> David Chelimsky, Dave Astels, Bryan Helmkamp, Dan North, Zach Dennis, Aslak Hellesoy</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

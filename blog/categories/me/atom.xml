@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: me | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/me/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why blog?]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/07/07/why-blog/"/>
+    <updated>2013-07-07T15:46:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/07/07/why-blog</id>
+    <content type="html"><![CDATA[<h3>Writing helps me understand my thoughts.</h3>
+
+<p>When I&rsquo;m trying to learn a new topic or tool, writing about the target subject forces me to organize my thoughts into consumable pieces. A good indication that I need to learn more about a specific area occurs when I struggle to explain what I&rsquo;ve learned to someone else. A teacher must first learn the curriculum prior to teaching the class. This blog will be mutually beneficial for myself and for others. The blog directly helps me learn to express
+myself by further developing my communication and written skills. In addition, blogging opens up what I&rsquo;m learning to a broader audience for reference.</p>
+
+<p>Blogging complements the &ldquo;learn by doing&rdquo; technique by documenting and archiving all the information I gathered for a particular topic. Whether I&rsquo;m reading about the latest JavaScript micro-library or clever CSS hack, documenting which tools and techniques I&rsquo;ve used provides an incredible resource to myself (and hopefully others).</p>
+
+<p>My name is Edward Taylor and this is my blog.</p>
+]]></content>
+  </entry>
+  
+</feed>

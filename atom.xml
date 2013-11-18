@@ -1,155 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Edward Taylor</title>
-  <meta name="author" content="T. Edward Taylor Jr.">
-
-  
-  <meta name="description" content="Tweet Vagrant + Rails Nov 17th, 2013 Vagrant Over the past year I&rsquo;ve been using a Ubuntu VM image for developing all my Rails applications. I& &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><![CDATA[Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <link rel="canonical" href="http://edwardtaylor.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Edward Taylor" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-  
-
-</head>
-
-<body >
-  <header role="banner" id="sidebar">
-    <!-- Logo -->
-<!-- <aside id="logo" class="clearfix">
-  <div class="clearfix">
-    <a href="/">Edward Taylor</a>
-  </div>
-</aside> -->
-
-<aside id="gear_logo" class="clearfix">
-  <div class="clearfix">
-    <a href="/">
-      <i class="icon-cogs"></i>
-    </a>
-  </div>  
-</aside>
-
-<ul id="menu">
-
-  <li class="title">
-    <h1 id="title"><a href="/">Edward Taylor</a></h1>
-  </li>
-
-
-  <li class="subtitle">
-    <h2 id="subtitle">modern development</h2>
-  </li>
-
-  <li class="link">
-    <a href="/about/">about</a>
-  </li>
-  <li class="link">
-    <a href="/curriculum-vitae/">curriculum vitae</a>
-  </li>
-
-  <li class="link">
-    <a href="http://twitter.com/edward_echo22/">twitter</a>
-  </li>
-
-
-  <li class="link">
-    <a href="http://github.com/edwardtaylor/">github</a>
-  </li>
-
-  <li class="link rss">
-    <a href="/atom.xml">rss feed</a>
-  </li>
-</ul>
-
-
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:edwardtaylor.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-
-
-<!-- Octopress Love -->
-<aside id="octopress_linkback">
-  <a href="http://octopress.org/">
-    <span class="unicode_square">
-      <span class="unicode_circle">
-        &nbsp;
-      </span>
-    </span>
-    <span class="octopress">Powered by Octopress</span>
-  </a>
-</aside>
-
-  </header>
-  <section id="main">
-      
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/index.html" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/11/17/vagrant-rails/">Vagrant + Rails</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-17T22:56:00+00:00" pubdate data-updated="true">Nov 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <h3>Vagrant</h3>
+  <entry>
+    <title type="html"><![CDATA[Vagrant + Rails]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails/"/>
+    <updated>2013-11-17T22:56:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails</id>
+    <content type="html"><![CDATA[<h3>Vagrant</h3>
 
 <p>Over the past year I&rsquo;ve been using a Ubuntu VM image for developing all my Rails applications. I&rsquo;ve tried installing everything on my Windows box but constantly hit odd scenarios with Gems that didn&rsquo;t <em>just work</em> for one reason or another. I finally gave up and switched over to a Ubuntu virtual image and everything has been much more pleasant. In addition, there&rsquo;s a large support group of developers also working on a similar platform so many issues are resolved by a quick search.</p>
 
@@ -242,54 +111,15 @@ Enter a name under Saved Sessions and hit SAVE!</li>
 <li>[railsmn-dev-box] (<a href="https://github.com/railsmn/railsmn-dev-box">https://github.com/railsmn/railsmn-dev-box</a>)</li>
 </ul>
 
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/index.html" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/09/03/bounded-contexts/">Bounded Contexts</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-03T20:04:00+00:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <h3>Bounded Contexts</h3>
+  <entry>
+    <title type="html"><![CDATA[Bounded Contexts]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts/"/>
+    <updated>2013-09-03T20:04:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts</id>
+    <content type="html"><![CDATA[<h3>Bounded Contexts</h3>
 
 <p><em>Define: Bounded Context is a principle of strategical mapping out our domain models and setting consistency boundaries. A model (entity) is guaranteed to be consistent inside of its BC.</em></p>
 
@@ -309,54 +139,15 @@ Enter a name under Saved Sessions and hit SAVE!</li>
 <li><p><a href="http://dddcommunity.org/uncategorized/bounded-context">Bounded Context &ndash; Definition</a></p></li>
 </ul>
 
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/index.html" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/08/05/embracing-bdd/">Embracing BDD</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-05T23:30:00+00:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <h3>Wikipedia Definition</h3>
+  <entry>
+    <title type="html"><![CDATA[Embracing BDD]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd/"/>
+    <updated>2013-08-05T23:30:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd</id>
+    <content type="html"><![CDATA[<h3>Wikipedia Definition</h3>
 
 <blockquote><p>Behavior-driven development combines the general techniques and principles of <a href="http://en.wikipedia.org/wiki/Test-driven_development">test-driven-development</a> with ideas from <a href="http://en.wikipedia.org/wiki/Domain-driven_design">domain-driven design</a> and <a href="http://en.wikipedia.org/wiki/Object-oriented_analysis_and_design">object-oriented analysis and design</a> to provide software developers and business analysts with shared tools and a shared process to collaborate on software development, with the aim of delivering software that matters (as opposed to software that doesn&rsquo;t matter).</p></blockquote>
 
@@ -429,7 +220,7 @@ Acceptance Criteria:
 
 <p>I&rsquo;ll wrap up this post by showcasing this snazzy <a href="http://www.planetgeek.ch/2013/06/05/clean-code-cheat-sheet">workflow</a> that describes how acceptance tests integrate with my current development cycle. Take note of where the process starts and where the first line of code is actually written.</p>
 
-<p><a href="/images/atdd_tdd_lifecycle.png"><img src="/images/atdd_tdd_lifecycle.png" alt="ATDD TDD Workflow" /></a></p>
+<p><a href="http://edwardtaylor.github.io/images/atdd_tdd_lifecycle.png"><img src="http://edwardtaylor.github.io/images/atdd_tdd_lifecycle.png" alt="ATDD TDD Workflow" /></a></p>
 
 <h3>Additional Reading</h3>
 
@@ -439,54 +230,15 @@ Acceptance Criteria:
 <li><a href="http://www.amazon.com/RSpec-Book-Behaviour-Development-Cucumber/dp/1934356379/">The RSpec Book: Behaviour Driven Development with Rspec, Cucumber, and Friends</a> David Chelimsky, Dave Astels, Bryan Helmkamp, Dan North, Zach Dennis, Aslak Hellesoy</li>
 </ul>
 
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/index.html" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/07/17/upgrade-sublime-text-2/">Upgrade Sublime Text 2</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T21:08:00+00:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
+  <entry>
+    <title type="html"><![CDATA[Upgrade Sublime Text 2]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/"/>
+    <updated>2013-07-17T21:08:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
 
 <p><a href="http://www.sublimetext.com">Sublime Text</a> is an fantastic text editor and becoming my go-to editor of choice for code. The last time I&rsquo;ve preferred
 a text editor over a full-blown IDE was back in my college days when SSHing
@@ -526,54 +278,15 @@ a class project minutes for the midnight deadline.</p>
 <li><a href="http://en.wikipedia.org/wiki/Deb_">http://en.wikipedia.org/wiki/Deb_</a>(file_format)</li>
 </ul>
 
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/index.html" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2013/07/07/why-blog/">Why Blog?</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-07T15:46:00+00:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <h3>Writing helps me understand my thoughts.</h3>
+  <entry>
+    <title type="html"><![CDATA[Why blog?]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/07/07/why-blog/"/>
+    <updated>2013-07-07T15:46:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/07/07/why-blog</id>
+    <content type="html"><![CDATA[<h3>Writing helps me understand my thoughts.</h3>
 
 <p>When I&rsquo;m trying to learn a new topic or tool, writing about the target subject forces me to organize my thoughts into consumable pieces. A good indication that I need to learn more about a specific area occurs when I struggle to explain what I&rsquo;ve learned to someone else. A teacher must first learn the curriculum prior to teaching the class. This blog will be mutually beneficial for myself and for others. The blog directly helps me learn to express
 myself by further developing my communication and written skills. In addition, blogging opens up what I&rsquo;m learning to a broader audience for reference.</p>
@@ -581,40 +294,7 @@ myself by further developing my communication and written skills. In addition, b
 <p>Blogging complements the &ldquo;learn by doing&rdquo; technique by documenting and archiving all the information I gathered for a particular topic. Whether I&rsquo;m reading about the latest JavaScript micro-library or clever CSS hack, documenting which tools and techniques I&rsquo;ve used provides an incredible resource to myself (and hopefully others).</p>
 
 <p>My name is Edward Taylor and this is my blog.</p>
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-
-    <nav role="navigation" id="pagination">
-
-</nav>
-  </section>
-  
-
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-</body>
-</html>
+</feed>

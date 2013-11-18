@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vagrant + Rails]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails/"/>
+    <updated>2013-11-17T22:56:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails</id>
+    <content type="html"><![CDATA[<h3>Vagrant</h3>
+
+<p>Over the past year I&rsquo;ve been using a Ubuntu VM image for developing all my Rails applications. I&rsquo;ve tried installing everything on my Windows box but constantly hit odd scenarios with Gems that didn&rsquo;t <em>just work</em> for one reason or another. I finally gave up and switched over to a Ubuntu virtual image and everything has been much more pleasant. In addition, there&rsquo;s a large support group of developers also working on a similar platform so many issues are resolved by a quick search.</p>
+
+<p><strong>Enter <a href="(http://www.vagrantup.com">Vagrant</a></strong></p>
+
+<p>It&rsquo;s a god-send to RoR developers who must use Windows as their default operating system for whatever reason (e.g. Work policy, .Net projects, shared home system).</p>
+
+<p>Vagrant allows you to:</p>
+
+<blockquote><p>&ldquo;Create and configure lightweight, reproducible, and portable development environments.&rdquo;</p></blockquote>
+
+<p>Vagrant creates a super light-weight headless virtual machine using your provider of choice (VMWare, VirtualBox, AWS). Rather than allocating a gig or more of RAM to a Ubuntu virtual image, Vagrant only requires the bare minimum of resources required for a headless operating system. Of course you can scale your virtual image up or down depending on your needs. This mixed with Rails development is a phenomenal way to quickly create development images for yourself and your colleagues.</p>
+
+<p>After you have a Vagrant box up and running, a synced folder can be created between your host system and virtual image. This allows the developer to work on the host system while still writing code to the virtual image. In addition, Vagrant can forward ports from the host system to the virtual image allowing <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a> to work like a charm.</p>
+
+<p>There are lots of pre-configured boxes available for Vagrant. I found a Rails vagrant image hosted on GitHub at <a href="https://github.com/railsmn/railsmn-dev-box">https://github.com/railsmn/railsmn-dev-box</a>. Here are the steps I used to setup my Rails 4 environment on Windows.</p>
+
+<h3>Setup Vagrant Image</h3>
+
+<ol>
+<li>Download <a href="http://downloads.vagrantup.com/">Vagrant</a></li>
+<li><p>Clone the railsmn-dev-box repo</p>
+
+<pre><code>mkdir rails
+git clone git://github.com/railsmn/railsmn-dev-box.git rails
+cd rails
+</code></pre></li>
+<li><p>Modify script for Rails 4</p>
+
+<p>Open <code>./puppet/manifests/default.pp</code> and set Rails version. I wanted latest so I removed the current 3.2 version</p>
+
+<pre><code>exec { "${as_vagrant} 'gem install rails --no-rdoc --no-ri'":
+    creates =&gt; "${home}/.rvm/bin/rails",
+    require =&gt; Exec['install_ruby']
+}
+</code></pre></li>
+<li><p>Add your shared workspace</p>
+
+<p>Open <code>./Vagrantfile</code> and add the following line</p>
+
+<pre><code>config.vm.synced_folder  "workspace", "/home/vagrant/workspace"
+</code></pre>
+
+<p>The first parameter is the host folder relative to the root Vagrantfile. The second parameter is the full path on the virtual system. I created a workspace folder and then clone each project I&rsquo;m working on underneath the root workspace folder.</p>
+
+<p>More information: <a href="http://docs.vagrantup.com/v2/synced-folders">http://docs.vagrantup.com/v2/synced-folders</a></p></li>
+<li><p>Start the image <code>vagrant up</code></p></li>
+<li><p>SSH into your client</p>
+
+<p>I used PuTTY <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download">(download)</a></p>
+
+<p>To find out your settings, type the following after the machine boots:</p>
+
+<pre><code>vagrant ssh
+</code></pre>
+
+<p>Here&rsquo;s my output</p>
+
+<pre><code>Host: 127.0.0.1
+Port: 2222
+Username: vagrant
+Private key: C:/Users/Edward/.vagrant.d/insecure_private_key
+</code></pre>
+
+<p><strong>PuTTY Configuration</strong></p>
+
+<ol type="a">
+<li>Enter the Host Name: 127.0.0.1</li>
+<li>Enter the Port: 2222</li>
+<li>Go to Connection\Data
+Enter the UserName (vagrant) in Auto-login field</li>
+<li>Go to Connection\SSH\Auth
+Browser for you private key at the location listed above</li>
+<li>Go to Session
+Enter a name under Saved Sessions and hit SAVE!</li>
+</ol>
+</li>
+<li><p>Start Session, the default password is <code>vagrant</code></p></li>
+</ol>
+
+
+<p>Enjoy!</p>
+
+<h3>Resources:</h3>
+
+<ul>
+<li><a href="(http://www.vagrantup.com">Vagrant</a></li>
+<li><a href="https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Boxes">Official Vagrant Boxes</a></li>
+<li><a href="http://www.vagrantbox.es/">Community Boxes &ndash; VagrantBox.es</a></li>
+<li>[railsmn-dev-box] (<a href="https://github.com/railsmn/railsmn-dev-box">https://github.com/railsmn/railsmn-dev-box</a>)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

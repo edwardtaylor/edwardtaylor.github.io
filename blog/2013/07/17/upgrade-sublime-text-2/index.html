@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Upgrade Sublime Text 2 - Edward Taylor</title>
+  <meta name="author" content="T. Edward Taylor Jr.">
+
+  
+  <meta name="description" content="Tweet Upgrade Sublime Text 2 Jul 17th, 2013 I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Edward Taylor" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+
+</head>
+
+<body >
+  <header role="banner" id="sidebar">
+    <!-- Logo -->
+<!-- <aside id="logo" class="clearfix">
+  <div class="clearfix">
+    <a href="/">Edward Taylor</a>
+  </div>
+</aside> -->
+
+<aside id="gear_logo" class="clearfix">
+  <div class="clearfix">
+    <a href="/">
+      <i class="icon-cogs"></i>
+    </a>
+  </div>  
+</aside>
+
+<ul id="menu">
+
+  <li class="title">
+    <h1 id="title"><a href="/">Edward Taylor</a></h1>
+  </li>
+
+
+  <li class="subtitle">
+    <h2 id="subtitle">modern development</h2>
+  </li>
+
+  <li class="link">
+    <a href="/about/">about</a>
+  </li>
+  <li class="link">
+    <a href="/curriculum-vitae/">curriculum vitae</a>
+  </li>
+
+  <li class="link">
+    <a href="http://twitter.com/edward_echo22/">twitter</a>
+  </li>
+
+
+  <li class="link">
+    <a href="http://github.com/edwardtaylor/">github</a>
+  </li>
+
+  <li class="link rss">
+    <a href="/atom.xml">rss feed</a>
+  </li>
+</ul>
+
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:edwardtaylor.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+
+<!-- Octopress Love -->
+<aside id="octopress_linkback">
+  <a href="http://octopress.org/">
+    <span class="unicode_square">
+      <span class="unicode_circle">
+        &nbsp;
+      </span>
+    </span>
+    <span class="octopress">Powered by Octopress</span>
+  </a>
+</aside>
+
+  </header>
+  <section id="main">
+    <article class="post">
+  <div class="sharing-box">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/" data-via="edward_echo22" data-counturl="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/" data-size="large">Tweet</a>
+  
+  
+  
+</div>
+
+  
+  <header>
+    
+      <h2 class="entry-title">Upgrade Sublime Text 2</h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-17T21:08:00+00:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
+
+<p><a href="http://www.sublimetext.com">Sublime Text</a> is an fantastic text editor and becoming my go-to editor of choice for code. The last time I&rsquo;ve preferred
+a text editor over a full-blown IDE was back in my college days when SSHing
+into a DEV environment in using vi was the only way I could quickly submit
+a class project minutes for the midnight deadline.</p>
+
+<p>After walking through the steps to install Sublime Text it was now time for an upgrade, a new experience for me. Listed below are the steps I took to remove my previous installation and use the new deb installation provided by SublimeText.</p>
+
+<h3>Step One &ndash; Remove the old files</h3>
+
+<p>Remove the previous installation located at <code>/usr/lib/sublime-text</code></p>
+
+<p><strong>Note:</strong> The installation directory may vary so use <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?find">find</a> to locate and remove and files from the previous version.</p>
+
+<h3>Step Two &ndash; Remove application links</h3>
+
+<p>Remove any application links at <code>/usr/share/applications/</code></p>
+
+<p>Read more about the <a href="http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html">Linux Directory Hierarchy</a></p>
+
+<h3>Installing Sublime Text 3 (debian package)</h3>
+
+<ol>
+<li><p>Go to the <a href="http://www.sublimetext.com/3">download page</a> and download the <strong>deb</strong> package installer for your processor.</p></li>
+<li><p>Open the package installer using <strong>Ubuntu Software Center</strong> and install</p></li>
+<li><p>Navigate to <code>/usr/share/applications/</code> and drag the sublime-text.desktop icon over to your Unity launcher for quick access</p></li>
+<li><p>(Optional) If you would like to position the icon in your list, click and hold (1 second), then icon will lift from the Unity bar and allow you to reposition.</p></li>
+</ol>
+
+
+<p>References:</p>
+
+<ul>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+<li><a href="https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles">https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles</a></li>
+<li><a href="http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html">http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deb_">http://en.wikipedia.org/wiki/Deb_</a>(file_format)</li>
+</ul>
+
+
+
+
+</article>
+
+
+    <nav role="navigation" id="pagination">
+
+</nav>
+  </section>
+  
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

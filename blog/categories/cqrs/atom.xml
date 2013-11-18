@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CQRS | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/cqrs/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bounded Contexts]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts/"/>
+    <updated>2013-09-03T20:04:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts</id>
+    <content type="html"><![CDATA[<h3>Bounded Contexts</h3>
+
+<p><em>Define: Bounded Context is a principle of strategical mapping out our domain models and setting consistency boundaries. A model (entity) is guaranteed to be consistent inside of its BC.</em></p>
+
+<p>Let&rsquo;s break it down. Ever heard the phrase, &ldquo;Jack of all trades, master of none.&rdquo; Too many times we have seen systems that try to be everything to everybody and end up with a mediocre system with half-baked functionality. These systems tend to suffer from tight coupling and cannot be extended or changed easily without substantial risk. The problem lies with sharing the same model throughout your entire application. Different domains require different sets of information, workflows, views, and validation.</p>
+
+<p>By defining our bounded contexts, we explicitly state the responsibilities and expectations for each model. A &ldquo;recurring gift&rdquo; means entirely different things to a fundraiser, an accountant, and a payment processor. Instead of getting the three personas in a room and having a fight to the finish of what the &ldquo;real&rdquo; definition of &ldquo;recurring gift&rdquo; means, let them each work inside their domain.</p>
+
+<blockquote><p>&ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius &mdash; and a lot of courage &mdash; to move in the opposite direction.&rdquo; &ndash; Albert Einstein</p></blockquote>
+
+<p>Complexity is the true arch-nemesis of software development and Bounded Contexts are another weapon we can use to keep our applications simple and maintainable. Drawing these clear boundaries allows us to deploy/scale to the specific needs of each domain. Each Bounded Context can pick the technologies and architecture best suited for their domain. There are several BCs where a simple CRUD application will suffice while others may require different approaches. In the end, the constraints imposed by Bounded Context add incredible amounts of flexibility and freedom to choose the best solution for a given domain.</p>
+
+<p>Resources:</p>
+
+<ul>
+<li><p><a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain-Driven Design: Tackling Complexity in the Heart of Software</a> Eric Evans</p></li>
+<li><p><a href="http://www.infoq.com/articles/ddd-contextmapping">Strategic Domain Driven Design with Context Mapping</a></p></li>
+<li><p><a href="http://dddcommunity.org/uncategorized/bounded-context">Bounded Context &ndash; Definition</a></p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

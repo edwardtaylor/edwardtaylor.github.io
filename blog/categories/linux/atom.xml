@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2013-11-18T00:18:20+00:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrade Sublime Text 2]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/"/>
+    <updated>2013-07-17T21:08:00+00:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
+
+<p><a href="http://www.sublimetext.com">Sublime Text</a> is an fantastic text editor and becoming my go-to editor of choice for code. The last time I&rsquo;ve preferred
+a text editor over a full-blown IDE was back in my college days when SSHing
+into a DEV environment in using vi was the only way I could quickly submit
+a class project minutes for the midnight deadline.</p>
+
+<p>After walking through the steps to install Sublime Text it was now time for an upgrade, a new experience for me. Listed below are the steps I took to remove my previous installation and use the new deb installation provided by SublimeText.</p>
+
+<h3>Step One &ndash; Remove the old files</h3>
+
+<p>Remove the previous installation located at <code>/usr/lib/sublime-text</code></p>
+
+<p><strong>Note:</strong> The installation directory may vary so use <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?find">find</a> to locate and remove and files from the previous version.</p>
+
+<h3>Step Two &ndash; Remove application links</h3>
+
+<p>Remove any application links at <code>/usr/share/applications/</code></p>
+
+<p>Read more about the <a href="http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html">Linux Directory Hierarchy</a></p>
+
+<h3>Installing Sublime Text 3 (debian package)</h3>
+
+<ol>
+<li><p>Go to the <a href="http://www.sublimetext.com/3">download page</a> and download the <strong>deb</strong> package installer for your processor.</p></li>
+<li><p>Open the package installer using <strong>Ubuntu Software Center</strong> and install</p></li>
+<li><p>Navigate to <code>/usr/share/applications/</code> and drag the sublime-text.desktop icon over to your Unity launcher for quick access</p></li>
+<li><p>(Optional) If you would like to position the icon in your list, click and hold (1 second), then icon will lift from the Unity bar and allow you to reposition.</p></li>
+</ol>
+
+
+<p>References:</p>
+
+<ul>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+<li><a href="https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles">https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles</a></li>
+<li><a href="http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html">http://www.tldp.org/HOWTO/HighQuality-Apps-HOWTO/fhs.html</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deb_">http://en.wikipedia.org/wiki/Deb_</a>(file_format)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
