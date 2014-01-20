@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osx | Edward Taylor]]></title>
+  <link href="http://edwardtaylor.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://edwardtaylor.github.io/"/>
+  <updated>2014-01-20T13:14:48-05:00</updated>
+  <id>http://edwardtaylor.github.io/</id>
+  <author>
+    <name><![CDATA[T. Edward Taylor Jr.]]></name>
+    <email><![CDATA[edward@echo22.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[libxml-ruby]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2014/01/20/libxml-ruby/"/>
+    <updated>2014-01-20T11:57:00-05:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2014/01/20/libxml-ruby</id>
+    <content type="html"><![CDATA[<p><strong>Problem:</strong> libxml-ruby (2.3.3) is not compatiable with libxml versions 2.9.X</p>
+
+<p><strong>Environment:</strong> OS X Version 10.9.1 (Mavericks)</p>
+
+<p><strong>Error Message:</strong></p>
+
+<p><code>
+ruby_xml_node.c: In function ‘rxml_node_to_s’:`
+ruby_xml_node.c:622: error: dereferencing pointer to incomplete type`
+ruby_xml_node.c:624: error: dereferencing pointer to incomplete type`
+</code></p>
+
+<p><strong>Resolution:</strong></p>
+
+<p><code>
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+</code></p>
+
+<p>XCode command line tools on Mavericks includes version 2.9.0 <code>#define LIBXML_DOTTED_VERSION "2.9.0"</code> in
+<code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2/libxml/xmlversion.h</code></p>
+
+<p>The 10.8 SDK uses version 2.7.8 which is compatiable with the older libxml-ruby 2.3.3 version. Support for libxml version 2.9.x wasn&rsquo;t added until version 2.4.0 of libxml-ruby. <a href="https://github.com/xml4r/libxml-ruby/blob/master/HISTORY">HISTORY</a></p>
+
+<p>If we run the following command, we can see which SDK version is being included
+```
+$ xml2-config &mdash;cflags</p>
+
+<p>-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
+```</p>
+
+<p>Opening up the xml2-config script, I noticed it&rsquo;s using <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcrun.1.html">xcrun</a> to return the CFLAGS used when building libxml. After reading the documentation, we can target a different version of the SDK by using the SDKROOT environment variable.</p>
+
+<pre><code>SDKROOT
+
+Specifies the default SDK to be used when looking up tools (some tools may have SDK specific  versions).
+
+This  environment  variable  is also set by xcrun to be the absolute path to the user provided SDK (either via SDKROOT or the --sdk option), when it is used to invoke a normal developer tool (build tools like xcodebuild or make are exempt from this behavior).
+</code></pre>
+
+<p>After targeting the correct SDK and pulling libxml version 2.7.8, the gem successfully installs.</p>
+
+<h3>Resources:</h3>
+
+<ul>
+<li><a href="http://xml4r.github.io/libxml-ruby/">Project Page &ndash; LibXml-Ruby </a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcrun.1.html">xcrun(1) Mac OS X Developer Tools Manual Page</a></li>
+<li><a href="http://www.xmlsoft.org/FAQ.html">LibXml FAQ: xml2-config</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Edward Taylor]]></title>
   <link href="http://edwardtaylor.github.io/atom.xml" rel="self"/>
   <link href="http://edwardtaylor.github.io/"/>
-  <updated>2013-11-18T00:18:20+00:00</updated>
+  <updated>2014-01-20T13:14:48-05:00</updated>
   <id>http://edwardtaylor.github.io/</id>
   <author>
     <name><![CDATA[T. Edward Taylor Jr.]]></name>
@@ -14,9 +14,71 @@
 
   
   <entry>
+    <title type="html"><![CDATA[libxml-ruby]]></title>
+    <link href="http://edwardtaylor.github.io/blog/2014/01/20/libxml-ruby/"/>
+    <updated>2014-01-20T11:57:00-05:00</updated>
+    <id>http://edwardtaylor.github.io/blog/2014/01/20/libxml-ruby</id>
+    <content type="html"><![CDATA[<p><strong>Problem:</strong> libxml-ruby (2.3.3) is not compatiable with libxml versions 2.9.X</p>
+
+<p><strong>Environment:</strong> OS X Version 10.9.1 (Mavericks)</p>
+
+<p><strong>Error Message:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby_xml_node.c: In function ‘rxml_node_to_s’:`
+</span><span class='line'>ruby_xml_node.c:622: error: dereferencing pointer to incomplete type`
+</span><span class='line'>ruby_xml_node.c:624: error: dereferencing pointer to incomplete type`</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Resolution:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>XCode command line tools on Mavericks includes version 2.9.0 <code>#define LIBXML_DOTTED_VERSION "2.9.0"</code> in
+<code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2/libxml/xmlversion.h</code></p>
+
+<p>The 10.8 SDK uses version 2.7.8 which is compatiable with the older libxml-ruby 2.3.3 version. Support for libxml version 2.9.x wasn&rsquo;t added until version 2.4.0 of libxml-ruby. <a href="https://github.com/xml4r/libxml-ruby/blob/master/HISTORY">HISTORY</a></p>
+
+<p>If we run the following command, we can see which SDK version is being included</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ xml2-config --cflags
+</span><span class='line'>
+</span><span class='line'>-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Opening up the xml2-config script, I noticed it&rsquo;s using <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcrun.1.html">xcrun</a> to return the CFLAGS used when building libxml. After reading the documentation, we can target a different version of the SDK by using the SDKROOT environment variable.</p>
+
+<pre><code>SDKROOT
+
+Specifies the default SDK to be used when looking up tools (some tools may have SDK specific  versions).
+
+This  environment  variable  is also set by xcrun to be the absolute path to the user provided SDK (either via SDKROOT or the --sdk option), when it is used to invoke a normal developer tool (build tools like xcodebuild or make are exempt from this behavior).
+</code></pre>
+
+<p>After targeting the correct SDK and pulling libxml version 2.7.8, the gem successfully installs.</p>
+
+<h3>Resources:</h3>
+
+<ul>
+<li><a href="http://xml4r.github.io/libxml-ruby/">Project Page &ndash; LibXml-Ruby </a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcrun.1.html">xcrun(1) Mac OS X Developer Tools Manual Page</a></li>
+<li><a href="http://www.xmlsoft.org/FAQ.html">LibXml FAQ: xml2-config</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Vagrant + Rails]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails/"/>
-    <updated>2013-11-17T22:56:00+00:00</updated>
+    <updated>2013-11-17T22:56:00-05:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/11/17/vagrant-rails</id>
     <content type="html"><![CDATA[<h3>Vagrant</h3>
 
@@ -117,7 +179,7 @@ Enter a name under Saved Sessions and hit SAVE!</li>
   <entry>
     <title type="html"><![CDATA[Bounded Contexts]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts/"/>
-    <updated>2013-09-03T20:04:00+00:00</updated>
+    <updated>2013-09-03T20:04:00-04:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/09/03/bounded-contexts</id>
     <content type="html"><![CDATA[<h3>Bounded Contexts</h3>
 
@@ -145,7 +207,7 @@ Enter a name under Saved Sessions and hit SAVE!</li>
   <entry>
     <title type="html"><![CDATA[Embracing BDD]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd/"/>
-    <updated>2013-08-05T23:30:00+00:00</updated>
+    <updated>2013-08-05T23:30:00-04:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/08/05/embracing-bdd</id>
     <content type="html"><![CDATA[<h3>Wikipedia Definition</h3>
 
@@ -236,7 +298,7 @@ Acceptance Criteria:
   <entry>
     <title type="html"><![CDATA[Upgrade Sublime Text 2]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/"/>
-    <updated>2013-07-17T21:08:00+00:00</updated>
+    <updated>2013-07-17T21:08:00-04:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
 
@@ -284,7 +346,7 @@ a class project minutes for the midnight deadline.</p>
   <entry>
     <title type="html"><![CDATA[Why blog?]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/07/07/why-blog/"/>
-    <updated>2013-07-07T15:46:00+00:00</updated>
+    <updated>2013-07-07T15:46:00-04:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/07/07/why-blog</id>
     <content type="html"><![CDATA[<h3>Writing helps me understand my thoughts.</h3>
 

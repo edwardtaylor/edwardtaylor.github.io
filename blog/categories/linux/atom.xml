@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Edward Taylor]]></title>
   <link href="http://edwardtaylor.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://edwardtaylor.github.io/"/>
-  <updated>2013-11-18T00:18:20+00:00</updated>
+  <updated>2014-01-20T13:14:48-05:00</updated>
   <id>http://edwardtaylor.github.io/</id>
   <author>
     <name><![CDATA[T. Edward Taylor Jr.]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Upgrade Sublime Text 2]]></title>
     <link href="http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2/"/>
-    <updated>2013-07-17T21:08:00+00:00</updated>
+    <updated>2013-07-17T21:08:00-04:00</updated>
     <id>http://edwardtaylor.github.io/blog/2013/07/17/upgrade-sublime-text-2</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been developing primarily on Windows-based machines and slowly learning (and loving) developing on Linux. My distro of choice is the popular Ubuntu environment mainly due to the overwhelming number of people that also use this distro to develop Rails applications.</p>
 
